@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   resources :partners
   resources :sectors
   resources :clients
+  resources :reviews
 end

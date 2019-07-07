@@ -16,7 +16,34 @@
     </div>
   </div>
 
-  <div class='col mt-3'>
+  <div class='col mt-1 mt-sm-3'>
+    <h2 class='d-sm-none h3'> Opiniones </h2>
     <%= render @reviews %>
+    <div class='card collapse new-review show'>
+      <div class='card-body'>
+        <p> ¿Has estado recientemente en este establecimiento? Si es así y tienes a mano tu ticket, puedes escribir ahora tu experiencia. </p>
+        <button class='btn btn-primary btn-lg btn-block' type='button' data-toggle='collapse' data-target='.new-review'> Escribe ahora tu opinión </button>
+        
+      </div>
+    </div>
+    <div class='card collapse new-review'>
+      <div class='card-body'>
+        <%= form_for @new_review do |f| %>
+          <%= hidden_field_tag :partner_id, @partner.id %>
+          <div class='form-group'>
+            <%= f.label :review, 'Escribe tu opinión' %>
+            <%= f.text_area :review, rows: 3, class: 'form-control' %>
+          </div>
+          <div class='form-group'>
+            <%= f.label :starts, 'Puntúa tu experiencia' %>
+            <%= f.select :starts, options_for_select({'*': 1, '**': 2, '***': 3, '****': 4, '*****': 5}), {}, class: 'form-control custom-select' %>
+          </div>
+          <div class='d-flex justify-content-end align-items-center'>
+            <%= f.submit 'Enviar mi opinión', class: 'btn btn-primary' %>
+            <button class='btn btn-secondary ml-4' type='button' data-toggle='collapse' data-target='.new-review'> Cancelar </button>
+          </div>
+        <% end %>
+      </div>
+    </div>
   </div>
 </div>

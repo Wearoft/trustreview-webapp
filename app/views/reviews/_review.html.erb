@@ -8,7 +8,8 @@
           <h1 class='mt-0 h5'> <%= review.client.name %> </h1>
           <p class='small text-muted'> <%= time_ago_in_words review.created_at %> </p>
         </div>
-        <p class='mb-0'> <%= review.review %> </p>
+        <p> <%= review.review %> </p>
+        <p class='mb-0 text-danger'> <%= '*' * review.starts %> </p>
       </div>
     </div>
 

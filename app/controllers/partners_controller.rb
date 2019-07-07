@@ -11,6 +11,7 @@ class PartnersController < ApplicationController
 
   def show
     @reviews = @partner.reviews.order created_at: :desc
+    @new_review = @partner.reviews.new
   end
   
 private
