@@ -25,7 +25,7 @@ development:
   <<: *default
   database: TrustReview_development
   username: postgres
-  password: clave
+  password: 
 
   # Connect on a TCP socket. Omitted by default since the client uses a
   # domain socket that doesn't need configuration. Windows does not have
@@ -52,7 +52,7 @@ test:
   <<: *default
   database: TrustReview_test
   username: postgres
-  password: clave
+  password: 
 
 # As with config/credentials.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
