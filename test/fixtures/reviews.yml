@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  partner_id: one
+  client_id: one
+  starts: 1
+  review: MyText
+
+two:
+  partner_id: two
+  client_id: two
+  starts: 1
+  review: MyText

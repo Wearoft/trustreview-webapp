@@ -1,0 +1,22 @@
+<h1> <%= @partner.name %> </h1>
+
+<div class='row'>
+  <div class='col-md-5'>
+    <div class='card my-3'>
+      <%= image_tag @partner.image, class: 'card-img-top' %>
+      <div class='card-body'>
+        <div class='card-subtitle text-uppercase text-muted small'> <%= @partner.sector.name %> </div>
+        <div class='d-flex justify-content-between align-items-top'>
+          <h1 class='card-title h5'> <%= @partner.name %> </h1>
+          <aside class='h4 text-danger'> <%= show_starts @partner %> </aside> 
+        </div>
+        <address class='card-text'> <%= @partner.address %> <br /> <%= @partner.city %> (<%= @partner.province %>) </address>
+        <p class='card-text'> Tlfno. <%= link_to @partner.phone, "tel:#{@partner.phone}" %> </p>
+      </div>
+    </div>
+  </div>
+
+  <div class='col mt-3'>
+    <%= render @reviews %>
+  </div>
+</div>

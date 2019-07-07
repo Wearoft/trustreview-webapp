@@ -1,0 +1,15 @@
+<nav class='navbar bg-white border-bottom'>
+  <%= link_to 'Trust Review', root_url, class: 'navbar-brand' %>
+  <button class='navbar-toggler' type='button' data-toggle='collapse' data-target='#navbarToggler' aria-controls='navbarToggler' aria-expanded='false' aria-label='Toggle navigation'> <span class='navbar-toggler-icon'></span> </button>
+  <div class='collapse navbar-collapse' id='navbarToggler'>
+    <ul class='navbar-nav mr-auto ml-md-3 mt-2 mt-lg-0'>
+      <li class='nav-item'> <%= link_to 'Todo', root_url, class: "nav-link #{'active' if @sector.nil?}" %> </li>
+      <%= render @sectors %>
+    </ul>
+    <% if current_page? root_url %>
+      <!-- <button type='button' class='btn btn-outline-primary' data-toggle='modal' data-target='#new-lead-form'> Quiero unirme </button> -->
+    <% else %>
+      <%# link_to 'Volver a inicio', root_url, class: 'btn btn-outline-primary' %>
+    <% end %>
+  </div>
+</nav>

@@ -1,0 +1,27 @@
+a.btn:not(.btn-link) {                                                                                                                         
+  text-decoration: none;                                                                                       
+}                                                                                                              
+
+.navbar {                                                                                                      
+  @extend .navbar-expand-lg;                                                                                   
+  @extend .navbar-light;                                                                                       
+  @extend .bg-light;                                                                                           
+}                                                                                                              
+
+.navbar-brand {                                                                                                
+  @extend .d-flex;                                                                                             
+  @extend .align-items-center;                                                                                 
+  img {                                                                                                        
+    height: $navbar-brand-font-size;                                                                           
+  }                                                                                                            
+}                                                                                                              
+
+.app-name {                                                                                                    
+  @extend .font-weight-bolder;                                                                                 
+  .inmo {                                                                                                      
+    color: $purple;                                                                                            
+  }                                                                                                            
+  .base {                                                                                                      
+    color: $cobalt;                                                                                            
+  }                                                                                                            
+}         

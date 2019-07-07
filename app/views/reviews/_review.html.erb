@@ -1,0 +1,16 @@
+<div class='card mb-3'>
+  <div class='card-body'>
+
+    <div class='media'>
+      <%# image_tag "http://lorempixel.com/40/40/people", class: 'mr-3' %>
+      <div class='media-body mb-0'>
+        <div class='d-flex justify-content-between'>
+          <h1 class='mt-0 h5'> <%= review.client.name %> </h1>
+          <p class='small text-muted'> <%= time_ago_in_words review.created_at %> </p>
+        </div>
+        <p class='mb-0'> <%= review.review %> </p>
+      </div>
+    </div>
+
+  </div>
+</div>
